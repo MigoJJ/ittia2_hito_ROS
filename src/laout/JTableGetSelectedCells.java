@@ -133,7 +133,7 @@ public class JTableGetSelectedCells extends JPanel {
                     for (int i = rowIndexStart; i <= rowIndexEnd; i++) {
                         for (int j = colIndexStart; j <= colIndexEnd; j++) {
                             if (table.isCellSelected(i, j)) {
-//                                System.out.printf("Selected [Row,Column] = [%d,%d]\n", i, j);
+                                System.out.printf("Selected [Row,Column] = [%d,%d]\n", i, j);
                                 Object targetcellData = (table.getValueAt(i,j));
                                 PickuprosJtableCell.makeArrayList(targetcellData); 
                             }

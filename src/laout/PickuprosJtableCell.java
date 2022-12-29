@@ -3,8 +3,6 @@ package laout;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Scanner;
 import java.util.Set;
@@ -12,17 +10,15 @@ import java.util.Set;
 public class PickuprosJtableCell {
 	static ArrayList<String> stringArrayList = new ArrayList<>();
 	
-	public static void makeArrayList(Object targetcellData){
-//		if (s !="Exit") { 
+	public static <E> void makeArrayList(Object targetcellData){
 		stringArrayList.add((String) targetcellData);
-//		System.out.println(stringArrayList);
-//		};
-
-        Set<String> s = new LinkedHashSet<String>(stringArrayList);  
-        System.out.println(s); 
-
-		PickuprosJtableCell pjc = new PickuprosJtableCell();
-		pjc.readfiler("/home/migoey/git/JAVA_Ex/src/lgs_data/ROS_plate");
+		System.out.println(stringArrayList);
+		if ((String) targetcellData == "Exit") {
+			Set<String> s = new LinkedHashSet<String>(stringArrayList);  
+			System.out.println(s); 
+		}
+//		PickuprosJtableCell pjc = new PickuprosJtableCell();
+//		pjc.readfiler("/home/migoey/git/JAVA_Ex/src/lgs_data/ROS_plate");
 		
 	}
 	
