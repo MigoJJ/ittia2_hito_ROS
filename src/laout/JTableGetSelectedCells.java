@@ -25,8 +25,7 @@ public class JTableGetSelectedCells extends JPanel {
     private static void showFrame() {
         JPanel panel = new JTableGetSelectedCells();
         panel.setOpaque(true);
-
-        JFrame frame = new JFrame("JTable Selected Cells Demo");
+        JFrame frame = new JFrame("JTable Selected Cells");
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setContentPane(panel);
         frame.pack();
@@ -39,16 +38,15 @@ public class JTableGetSelectedCells extends JPanel {
 
     private void initializePanel() {
         setLayout(new BorderLayout());
-        setPreferredSize(new Dimension(500, 500));
-
+        setPreferredSize(new Dimension(1500, 500));
         table = new JTable(new PremiereLeagueTableModel());
         table.getColumnModel().getColumn(0).setMinWidth(200);
         table.getSelectionModel().addListSelectionListener(
                 new RowColumnListSelectionListener());
-
         table.setFillsViewportHeight(true);
+        table.setRowHeight(25);
+        
         JScrollPane pane = new JScrollPane(table);
-
         JPanel control = new JPanel(new FlowLayout());
         final JCheckBox cb1 = new JCheckBox("Row Selection");
         final JCheckBox cb2 = new JCheckBox("Columns Selection");
@@ -58,7 +56,6 @@ public class JTableGetSelectedCells extends JPanel {
         cb1.addActionListener(e -> {
             table.setRowSelectionAllowed(cb1.isSelected());
             table.setColumnSelectionAllowed(!cb1.isSelected());
-
             cb2.setSelected(!cb1.isSelected());
         });
 
@@ -86,32 +83,22 @@ public class JTableGetSelectedCells extends JPanel {
 
     static class PremiereLeagueTableModel extends AbstractTableModel {
         // TableModel's column names
-        private final String[] columnNames = {
-                "CLUB", "MP", "W", "D", "L", "GF", "GA", "GD", "PTS"
-        };
-
+        String[] roscolumnNames = (String[]) ReturnrosData.columnNames(); 
+        private final String [] columnNames = roscolumnNames;
         // TableModel's data
-        private final Object[][] data = {
-                {"Chelsea", 8, 6, 1, 1, 16, 3, 13, 19},
-                {"Liverpool", 8, 5, 3, 0, 22, 6, 16, 18},
-                {"Manchester City", 8, 5, 2, 1, 16, 3, 13, 17},
-                {"Brighton", 8, 4, 3, 1, 8, 5, 3, 15},
-                {"Tottenham", 8, 5, 0, 3, 9, 12, -3, 15}
-        };
+        Object[][] rosData = (Object[][]) ReturnrosData.roscrsData();  
+        private final Object[][] data = rosData;
 
         public int getRowCount() {
             return data.length;
         }
-
         public int getColumnCount() {
-            return columnNames.length;
+            return roscolumnNames.length;
         }
-
         @Override
         public String getColumnName(int column) {
             return columnNames[column];
         }
-
         public Object getValueAt(int rowIndex, int columnIndex) {
             return data[rowIndex][columnIndex];
         }
@@ -146,6 +133,10 @@ public class JTableGetSelectedCells extends JPanel {
                         for (int j = colIndexStart; j <= colIndexEnd; j++) {
                             if (table.isCellSelected(i, j)) {
                                 System.out.printf("Selected [Row,Column] = [%d,%d]\n", i, j);
+                                
+                                Object targetcellData = (table.getValueAt(i,j));
+                                System.out.println("Object targetcellData = (table.getValueAt(i,j));   " +targetcellData);
+                                
                             }
                         }
                     }
