@@ -1,9 +1,44 @@
 package laout;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Scanner;
+import java.util.Set;
+
 public class PickuprosJtableCell {
+	static ArrayList<String> stringArrayList = new ArrayList<>();
+	
+	public static void makeArrayList(Object targetcellData){
+//		if (s !="Exit") { 
+		stringArrayList.add((String) targetcellData);
+//		System.out.println(stringArrayList);
+//		};
 
-	public static void main(String[] args) {
+        Set<String> s = new LinkedHashSet<String>(stringArrayList);  
+        System.out.println(s); 
 
+		PickuprosJtableCell pjc = new PickuprosJtableCell();
+		pjc.readfiler("/home/migoey/git/JAVA_Ex/src/lgs_data/ROS_plate");
+		
 	}
+	
+	public void readfiler(String readf) {
+		try{
+			File textDirName = new File(readf); 
+				Scanner myReader = new Scanner(textDirName);
+			while (myReader.hasNextLine()) {
+				String data = myReader.nextLine();
+				System.out.println(data);
+			}
+	       myReader.close();
+		}catch (FileNotFoundException e) {
+			System.out.println("An error occurred.");
+			e.printStackTrace();
+		}
+    }
 
 }

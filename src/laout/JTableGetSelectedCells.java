@@ -5,6 +5,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.table.AbstractTableModel;
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 
@@ -109,15 +110,15 @@ public class JTableGetSelectedCells extends JPanel {
             if (table.getRowSelectionAllowed() &&
                     !table.getColumnSelectionAllowed()) {
                 int[] rows = table.getSelectedRows();
-                System.out.println("Selected Rows: " + Arrays.toString(rows));
+//                System.out.println("Selected Rows: " + Arrays.toString(rows));
             }
             if (table.getColumnSelectionAllowed() &&
                     !table.getRowSelectionAllowed()) {
                 int[] cols = table.getSelectedColumns();
-                System.out.println("Selected Columns: " + Arrays.toString(cols));
+//                System.out.println("Selected Columns: " + Arrays.toString(cols));
             } else if (table.getCellSelectionEnabled()) {
                 int selectionMode = table.getSelectionModel().getSelectionMode();
-                System.out.println("selectionMode = " + selectionMode);
+//                System.out.println("selectionMode = " + selectionMode);
                 if (selectionMode == ListSelectionModel.SINGLE_SELECTION) {
                     int rowIndex = table.getSelectedRow();
                     int colIndex = table.getSelectedColumn();
@@ -128,15 +129,13 @@ public class JTableGetSelectedCells extends JPanel {
                     int rowIndexEnd = table.getSelectionModel().getMaxSelectionIndex();
                     int colIndexStart = table.getSelectedColumn();
                     int colIndexEnd = table.getColumnModel().getSelectionModel().getMaxSelectionIndex();
-
+                    
                     for (int i = rowIndexStart; i <= rowIndexEnd; i++) {
                         for (int j = colIndexStart; j <= colIndexEnd; j++) {
                             if (table.isCellSelected(i, j)) {
-                                System.out.printf("Selected [Row,Column] = [%d,%d]\n", i, j);
-                                
+//                                System.out.printf("Selected [Row,Column] = [%d,%d]\n", i, j);
                                 Object targetcellData = (table.getValueAt(i,j));
-                                System.out.println("Object targetcellData = (table.getValueAt(i,j));   " +targetcellData);
-                                
+                                PickuprosJtableCell.makeArrayList(targetcellData); 
                             }
                         }
                     }
