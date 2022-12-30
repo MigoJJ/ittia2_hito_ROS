@@ -2,8 +2,8 @@
 package laout;
 
 public class ReturnrosData {
-	public static String[] columnNames() {
-		String[] rosDatacNameOrigin = {
+	public static Object[] columnNames() {
+		Object[] rosDatacNameOrigin = {
 				"Commit...","2","3","4","5","6","7","last"
 		};  
     	return rosDatacNameOrigin;

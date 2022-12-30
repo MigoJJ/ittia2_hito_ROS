@@ -9,14 +9,13 @@ import java.util.Set;
 
 public class PickuprosJtableCell {
 	static ArrayList<String> stringArrayList = new ArrayList<>();
-	
-	public static <E> void makeArrayList(Object targetcellData){
+		public static <E> void makeArrayList(Object targetcellData){
 		stringArrayList.add((String) targetcellData);
-		System.out.println(stringArrayList);
-		if ((String) targetcellData == "Exit") {
 			Set<String> s = new LinkedHashSet<String>(stringArrayList);  
-			System.out.println(s); 
-		}
+			System.out.println("System.out.println (s); " +s); 
+
+//			if ((String) targetcellData == "Exit") {
+			//		}
 //		PickuprosJtableCell pjc = new PickuprosJtableCell();
 //		pjc.readfiler("/home/migoey/git/JAVA_Ex/src/lgs_data/ROS_plate");
 		
