@@ -12,14 +12,13 @@ public class PickuprosJtableCell {
 		public static <E> void makeArrayList(Object targetcellData){
 		stringArrayList.add((String) targetcellData);
 			Set<String> s = new LinkedHashSet<String>(stringArrayList);  
-			System.out.println("System.out.println (s); " +s); 
+			System.out.println(s); 
 
-//			if ((String) targetcellData == "Exit") {
-			//		}
-//		PickuprosJtableCell pjc = new PickuprosJtableCell();
-//		pjc.readfiler("/home/migoey/git/JAVA_Ex/src/lgs_data/ROS_plate");
-		
-	}
+			if ((String) targetcellData == "Exit") {
+				PickuprosJtableCell pjc = new PickuprosJtableCell();
+				pjc.readfiler("/home/migoey/git/JAVA_Ex/src/lgs_data/ROS_plate");
+			}		
+		}
 	
 	public void readfiler(String readf) {
 		try{
@@ -35,5 +34,4 @@ public class PickuprosJtableCell {
 			e.printStackTrace();
 		}
     }
-
 }

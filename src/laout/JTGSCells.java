@@ -1,29 +1,63 @@
 package laout;
 //https://docs.oracle.com/javase/tutorial/uiswing/components/table.html
-import javax.swing.*;			
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
-import javax.swing.table.AbstractTableModel;
+import javax.swing.*;
+import javax.swing.table.TableColumn;
+
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.Arrays;
 
 public class JTGSCells extends JPanel {
-    private static JTable table = null;
+	private static String getCellValue ="";
+	private static JTable table = null;
+    
     public JTGSCells() {
-        Object[] roscolumnNames = (Object[]) ReturnrosData.columnNames(); 
+    	JScrollPane scrollPane = new JScrollPane(table);
+         	
+    	 Object[] roscolumnNames = (Object[]) ReturnrosData.columnNames(); 
         Object[][] rosData = (Object[][]) ReturnrosData.roscrsData();  
 //        System.out.println(Arrays.deepToString(rosData));
-
         table = new JTable(rosData, roscolumnNames);
-        JScrollPane scrollPane = new JScrollPane(table);
         table.setFillsViewportHeight(true);
+        table.getColumnModel().getColumn(0).setMinWidth(200);
         
-    	 setLayout(new BorderLayout());
-        setPreferredSize(new Dimension(1500, 500));
+        setLayout(new BorderLayout());
+        setPreferredSize(new Dimension(1000, 500));
+        table.setRowHeight(25);
         add(table.getTableHeader(), BorderLayout.PAGE_START);
         add(table, BorderLayout.CENTER);
         
+        TableColumn column = null;
+	        for (int i = 0; i < 8; i++) {
+	            column = table.getColumnModel().getColumn(i);
+	            if (i == 2) {
+	                column.setPreferredWidth(100); //third column is bigger
+	            } else {
+	                column.setPreferredWidth(50);
+	            }
+	        }
+	        
+	        
+	        
+	        
+    
+table.addMouseListener( new MouseAdapter(){
+    public void mousePressed(MouseEvent e){
+        JTable table = (JTable)e.getSource();
+        int row = table.rowAtPoint( e.getPoint() );
+        int column = table.columnAtPoint( e.getPoint() );
+
+        if (! table.isRowSelected(row))
+	        table.changeSelection(row, column, false, false);
+	        table.getModel().getValueAt(row, column);
+	        getCellValue = (String) table.getModel().getValueAt(row, column);
+	        PickuprosJtableCell.makeArrayList(getCellValue);
     }
+});
+
+    }
+
     private static void showFrame() {
         JPanel panel = new JTGSCells();
         panel.setOpaque(true);
@@ -32,62 +66,9 @@ public class JTGSCells extends JPanel {
         frame.setContentPane(panel);
         frame.pack();
         frame.setVisible(true);
-
     }
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(JTGSCells::showFrame);
     }
-    
-    private void initializePanel() {
-        setLayout(new BorderLayout());
-        setPreferredSize(new Dimension(1000, 500));
-
-
-        
-       
-      
-       
-//        table.getColumnModel().getColumn(0).setMinWidth(200);
-//        
-//        table.getSelectionModel().addListSelectionListener(
-//                new RowColumnListSelectionListener());
-//        table.setFillsViewportHeight(true);
-//        table.setRowHeight(25);
-//        
-//        JScrollPane pane = new JScrollPane(table);
-//        JPanel control = new JPanel(new FlowLayout());
-    }
 }
-    
-    
-    
-//    static class ROS_data_pickupcell extends AbstractTableModel {
-//        // TableModel's column names
-//        String[] roscolumnNames = (String[]) ReturnrosData.columnNames(); 
-//        private final String [] columnNames = roscolumnNames;
-//        // TableModel's data
-//        Object[][] rosData = (Object[][]) ReturnrosData.roscrsData();  
-//        private final Object[][] data = rosData;
-//
-//        public int getRowCount() {
-//            return data.length;
-//        }
-//        public int getColumnCount() {
-//            return roscolumnNames.length;
-//        }
-//        @Override
-//        public String getColumnName(int column) {
-//            return columnNames[column];
-//        }
-//        public Object getValueAt(int rowIndex, int columnIndex) {
-//            return data[rowIndex][columnIndex];
-//        }
-//    }
-//
-//    private class RowColumnListSelectionListener implements ListSelectionListener {
-//        public void valueChanged(ListSelectionEvent e) {
-//
-//            }
-//        }}
-// 
