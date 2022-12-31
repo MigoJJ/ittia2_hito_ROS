@@ -11,9 +11,12 @@ public class ReturnrosData {
 	
 	public static Object roscrsData() {
         Object[][] roscrsDataOrigin ={
-        		{"General","Fever/chills","Weight change","Fatigue","Night sweats","Anorexia","",""},
-        		{"Vision",1,222,3,4,5,6,"recent trauma"},
-        		{"Head and Neck",1,2,3333,4,5,6,"feeling like a curtain got pulled down"},
+        		{"General",
+        			"Fever/chills","Weight change","Fatigue","Night sweats","Anorexia","",""},
+        		{"Vision",	
+        				"Decreased visual acuity","Blurry vision","Diplopia","Eye pain/discharge","",",",""},
+        		{"Head and Neck",
+        				1,2,3333,4,5,6,"feeling like a curtain got pulled down"},
         		{"Pulmonary",1,2,3,4,5,6,7},
         		{"Cardiovascular",1,2,3,4,5,6,7},
         		{"Gastrointestinal",1,2,3,4,5,6,7},

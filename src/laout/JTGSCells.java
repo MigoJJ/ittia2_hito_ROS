@@ -1,5 +1,5 @@
 package laout;
-//https://docs.oracle.com/javase/tutorial/uiswing/components/table.html
+//https://uw.pressbooks.pub/fcmtextbook/chapter/review-of-systems-ros/
 import javax.swing.*;
 import javax.swing.table.TableColumn;
 
@@ -25,7 +25,7 @@ public class JTGSCells extends JPanel {
         setLayout(new BorderLayout());
         setPreferredSize(new Dimension(1200, 500));
         table.setRowHeight(35);
-        table.setFont(new Font("Arial", Font. PLAIN, 20));
+        table.setFont(new Font("Arial", Font. PLAIN, 13));
         add(table.getTableHeader(), BorderLayout.PAGE_START);
         add(table, BorderLayout.CENTER);
         
