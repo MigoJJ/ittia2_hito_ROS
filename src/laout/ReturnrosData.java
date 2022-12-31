@@ -4,14 +4,14 @@ package laout;
 public class ReturnrosData {
 	public static Object[] columnNames() {
 		Object[] rosDatacNameOrigin = {
-				"Commit...","2","3","4","5","6","7","last"
+				"Item...","Commit...","Commit...","Commit...","Commit...","Commit...","Commit...","last"
 		};  
     	return rosDatacNameOrigin;
 	}
 	
 	public static Object roscrsData() {
         Object[][] roscrsDataOrigin ={
-        		{"General","111",2,3,4,5,6,7},
+        		{"General","Fever/chills","Weight change","Fatigue","Night sweats","Anorexia","",""},
         		{"Vision",1,222,3,4,5,6,"recent trauma"},
         		{"Head and Neck",1,2,3333,4,5,6,"feeling like a curtain got pulled down"},
         		{"Pulmonary",1,2,3,4,5,6,7},
