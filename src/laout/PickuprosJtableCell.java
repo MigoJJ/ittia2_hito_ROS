@@ -18,6 +18,8 @@ public class PickuprosJtableCell {
 				PickuprosJtableCell pjc = new PickuprosJtableCell();
 				pjc.readfiler("/home/migoey/git/JAVA_Ex/src/lgs_data/ROS_plate");
 			}		
+			
+			PickuprosJtableCell_chagne.main(s);
 		}
 	
 	public void readfiler(String readf) {
