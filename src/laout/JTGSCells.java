@@ -23,8 +23,8 @@ public class JTGSCells extends JPanel {
         table.getColumnModel().getColumn(0).setMinWidth(200);
         
         setLayout(new BorderLayout());
-        setPreferredSize(new Dimension(1200, 500));
-        table.setRowHeight(35);
+        setPreferredSize(new Dimension(1800, 600));
+        table.setRowHeight(30);
         table.setFont(new Font("Arial", Font. PLAIN, 13));
         add(table.getTableHeader(), BorderLayout.PAGE_START);
         add(table, BorderLayout.CENTER);
