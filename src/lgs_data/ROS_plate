@@ -1,19 +1,10 @@
-{"General",
-   			"Fever/chills","Weight change","Fatigue","Night sweats","Anorexia","",""},
-{"Vision",	
-			"Decreased visual acuity","Blurry vision","Diplopia","Eye pain/discharge","",",",""},
-{"Head and Neck",
-        					"Pain","Sores or ulcers in mouth","Change in hearing acuity","Ear pain or discharge",
-        					"post nasal drip","hoarseness","Sense of lump/mass (globus) in throat w/swallowing"},
-        		{"Pulmonary",
-        					"Shortness of breath - @ rest or w/exertion?","Chest pain","Cough","Hemoptysis",
-        					"Wheezing","Snoring or stop breathing",7},
-        		{"Cardiovascular",
-        					"Chest pain (CP) or pressure", "Orthopnea (short of breath lying down)",
-        					"Paroxysmal Nocturnal Dyspnea (PND)? - sudden shortness of breath that awakens pt from sleep",
-        					"Lower extremity edema","Sudden loss of consciousness (syncope)",
-        					"Sense of rapid or irregular heart beat, palpatations","Calf/leg pain/cramps w/ambulation",
-        					"Wounds/ulcers in feet"},
+"General","Fever/chills","Weight change","Fatigue","Night sweats","Anorexia","",""
+"Vision","Decreased visual acuity","Blurry vision","Diplopia","Eye pain/discharge","",",",""
+"Head and Neck","Pain","Sores or ulcers in mouth","Change in hearing acuity","Ear pain or discharge""post nasal drip","hoarseness","Sense of lump/mass (globus) in throat w/swallowing"        		
+        		
+"Pulmonary","Shortness of breath - @ rest or w/exertion?","Chest pain","Cough","Hemoptysis","Wheezing","Snoring or stop breathing",7
+"Cardiovascular","Chest pain (CP) or pressure", "Orthopnea (short of breath lying down)","Paroxysmal Nocturnal Dyspnea (PND)? - sudden shortness of breath that awakens pt from sleep","Lower extremity edema","Sudden loss of consciousness (syncope)","Sense of rapid or irregular heart beat, palpatations","Calf/leg pain/cramps w/ambulation","Wounds/ulcers in feet"
+
         		{"Gastrointestinal",
         					"Heart burn/sub-sternal burning","Abdominal pain","Nausea or Vomiting",
         					"Abdominal swelling or distention","Constipation, Diarrhea or other change in bowel habits",

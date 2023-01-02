@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.util.Scanner;
+import java.util.Set;
 
 public class File_cdrw_proc   {
 	public void checkfiler(String checkf) throws IOException {
@@ -76,6 +77,18 @@ public class File_cdrw_proc   {
 	    try {
 	      FileWriter myWriter = new FileWriter(writef, true);
 	      myWriter.write(writed+ "\n");
+	      myWriter.close();
+//		      System.out.println("Successfully wrote to the file.");
+	    } catch (IOException e) {
+	      System.out.println("An error occurred.");
+	      e.printStackTrace();
+	    }
+	}
+
+	public static void writeliners(String writef, Set<String> s) throws IOException {
+	    try {
+	      FileWriter myWriter = new FileWriter(writef, true);
+	      myWriter.write(s + "\n");
 	      myWriter.close();
 //		      System.out.println("Successfully wrote to the file.");
 	    } catch (IOException e) {
