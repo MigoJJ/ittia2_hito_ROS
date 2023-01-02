@@ -54,7 +54,6 @@ table.addMouseListener( new MouseAdapter(){
 	        getCellValue = (String) table.getModel().getValueAt(row, column);
 	        try {
 				PickuprosJtableCell.makeArrayList(getCellValue);
-				
 				GetRowNoAt.getIndexRow(row);
 				
 			} catch (IOException e1) {
