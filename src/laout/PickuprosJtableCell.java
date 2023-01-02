@@ -22,5 +22,7 @@ public class PickuprosJtableCell {
 				File_cdrw_proc pjc = new File_cdrw_proc();
 				pjc.writeliners("/home/migoey/git/JAVA_Ex/src/lgs_data/ROS_plate_tmp",s);
 			}		
+			
+			PickuprosJtableCell_chagne.main(s);
 		}
 }
