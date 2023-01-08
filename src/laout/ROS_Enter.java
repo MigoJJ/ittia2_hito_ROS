@@ -1,25 +1,26 @@
 package laout;
 //https://uw.pressbooks.pub/fcmtextbook/chapter/review-of-systems-ros/
-import javax.swing.*;
+import javax.swing.*;	
 import javax.swing.table.TableColumn;
-
 import lgs_comm.GetRowNoAt;
-
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
-public class JTGSCells extends JPanel {
-	private static String getCellValue ="";
+public class ROS_Enter extends JPanel {
+	private static String getCellValue =null;
 	protected static JTable table = null;
     
-    public JTGSCells() {
+    public ROS_Enter() {
     	JScrollPane scrollPane = new JScrollPane(table);
-         	
-    	 Object[] roscolumnNames = (Object[]) ReturnrosData.columnNames(); 
-        Object[][] rosData = (Object[][]) ReturnrosData.roscrsData();  
+
+    	 Object[] roscolumnNames = (Object[]) ROS_JtableDATA.columnNames(); 
+        Object[][] rosData = (Object[][]) ROS_JtableDATA.roscrsData();  
 //        System.out.println(Arrays.deepToString(rosData));
         table = new JTable(rosData, roscolumnNames);
         table.setFillsViewportHeight(true);
@@ -42,9 +43,10 @@ public class JTGSCells extends JPanel {
 	            }
 	        }
     
-table.addMouseListener( new MouseAdapter(){
+table.addMouseListener(new MouseAdapter(){
     public void mousePressed(MouseEvent e){
-        JTable table = (JTable)e.getSource();
+
+    	 JTable table = (JTable)e.getSource();
         int row = table.rowAtPoint( e.getPoint() );
         int column = table.columnAtPoint( e.getPoint() );
 
@@ -52,21 +54,15 @@ table.addMouseListener( new MouseAdapter(){
 	        table.changeSelection(row, column, false, false);
 	        table.getModel().getValueAt(row, column);
 	        getCellValue = (String) table.getModel().getValueAt(row, column);
-	        try {
-				PickuprosJtableCell.makeArrayList(getCellValue);
-				GetRowNoAt.getIndexRow(row);
-				
-			} catch (IOException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
+
+	        ROS_AddArrayList.main(getCellValue,row,column);
     }
 });
 
     }
 
     private static void showFrame() {
-        JPanel panel = new JTGSCells();
+        JPanel panel = new ROS_Enter();
         panel.setOpaque(true);
         JFrame frame = new JFrame("JTable Selected Cells");
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -76,6 +72,6 @@ table.addMouseListener( new MouseAdapter(){
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(JTGSCells::showFrame);
+        SwingUtilities.invokeLater(ROS_Enter::showFrame);
     }
 }
