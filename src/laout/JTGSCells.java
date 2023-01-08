@@ -1,23 +1,24 @@
 package laout;
 //https://uw.pressbooks.pub/fcmtextbook/chapter/review-of-systems-ros/
-import javax.swing.*;
+import javax.swing.*;	
 import javax.swing.table.TableColumn;
-
 import lgs_comm.GetRowNoAt;
-
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class JTGSCells extends JPanel {
-	private static String getCellValue ="";
+	private static String getCellValue =null;
 	protected static JTable table = null;
     
     public JTGSCells() {
     	JScrollPane scrollPane = new JScrollPane(table);
-         	
+
     	 Object[] roscolumnNames = (Object[]) ReturnrosData.columnNames(); 
         Object[][] rosData = (Object[][]) ReturnrosData.roscrsData();  
 //        System.out.println(Arrays.deepToString(rosData));
@@ -44,7 +45,8 @@ public class JTGSCells extends JPanel {
     
 table.addMouseListener(new MouseAdapter(){
     public void mousePressed(MouseEvent e){
-        JTable table = (JTable)e.getSource();
+
+    	 JTable table = (JTable)e.getSource();
         int row = table.rowAtPoint( e.getPoint() );
         int column = table.columnAtPoint( e.getPoint() );
 
@@ -52,16 +54,8 @@ table.addMouseListener(new MouseAdapter(){
 	        table.changeSelection(row, column, false, false);
 	        table.getModel().getValueAt(row, column);
 	        getCellValue = (String) table.getModel().getValueAt(row, column);
-	        try {
-		       if(column==0) {
-					GetRowNoAt.getIndexRow(row);
-		       }else {     
-					PickuprosJtableCell.makeArrayList(getCellValue);
-		        }
-			} catch (IOException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
+
+	        ROS_AddArrayList.main(getCellValue,row,column);
     }
 });
 

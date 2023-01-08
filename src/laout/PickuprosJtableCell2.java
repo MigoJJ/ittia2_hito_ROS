@@ -7,14 +7,13 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 import lgs_comm.File_cdrw_proc;
 
-public class PickuprosJtableCell {
+public class PickuprosJtableCell2 {
 	static ArrayList<String> stringArrayList = new ArrayList<>();
 		public static <E> void makeArrayList(Object targetcellData) throws IOException{
 			stringArrayList.add((String) targetcellData);
 			Set<String> s = new LinkedHashSet<String>(stringArrayList);  
-
-			if (targetcellData == "Exit") {
-				System.out.println(s); 
-			}
+			
+			System.out.println(s); 
+			
 		}
 }
