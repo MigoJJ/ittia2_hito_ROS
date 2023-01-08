@@ -42,7 +42,7 @@ public class JTGSCells extends JPanel {
 	            }
 	        }
     
-table.addMouseListener( new MouseAdapter(){
+table.addMouseListener(new MouseAdapter(){
     public void mousePressed(MouseEvent e){
         JTable table = (JTable)e.getSource();
         int row = table.rowAtPoint( e.getPoint() );
@@ -53,9 +53,11 @@ table.addMouseListener( new MouseAdapter(){
 	        table.getModel().getValueAt(row, column);
 	        getCellValue = (String) table.getModel().getValueAt(row, column);
 	        try {
-				PickuprosJtableCell.makeArrayList(getCellValue);
-				GetRowNoAt.getIndexRow(row);
-				
+		       if(column==0) {
+					GetRowNoAt.getIndexRow(row);
+		       }else {     
+					PickuprosJtableCell.makeArrayList(getCellValue);
+		        }
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();

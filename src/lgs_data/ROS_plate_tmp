@@ -1,5 +1,89 @@
-[Orthopnea (short of breath lying down), Endocrine, Infectious Diseases, Musculoskeletal, Exit]
-[Cardiovascular, Genito-Urinary, Hematology/Oncology, Exit]
-[Vision, Cardiovascular, Genito-Urinary, Ob/Gyn/Breast, Endocrine, Exit]
-[General, Cardiovascular, Ob/Gyn/Breast, Infectious Diseases, Skin eruptions/rashes, Urgency, Frequency, Paroxysmal Nocturnal Dyspnea (PND)? - sudden shortness of breath that awakens pt from sleep, Mental Health, Exit]
-[Cardiovascular, Hematology/Oncology, Ob/Gyn/Breast, Endocrine, Exit]
+[...Vision...]
+  [-] Decreased visual acuity
+  [-] Blurry vision
+  [-] Diplopia
+  [-] Eye pain/discharge
+[...General...]
+  [-] Fever/chills
+  [-] Weight change
+  [-] Fatigue
+  [-] Night sweats
+  [-] Anorexia
+[...Genito-Urinary...]
+  [-] Blood in urine
+  [-] Burning with urination
+  [-] Urination at night
+  [-] Incontinence (unintentional loss of urine)
+  [-] Urgency, Frequency
+  [-] Incomplete emptying
+  [-] Decreased force of stream
+[...Hematology/Oncology...]
+  [-] Fevers
+  [-] chills
+  [-] cold sweats
+  [-] weight loss
+  [-] Abnormal bleeding/brusing
+  [-] New/growing lumps or bumps
+  [-] Hypercoaguability
+[...Ob/Gyn/Breast...]
+[...Endocrine...]
+  [-] Polyuria, polydypsia, polyphagia?
+  [-] Fatigue
+  [-] Weight loss
+  [-] Weight gain
+[...Musculoskeletal...]
+[...General...]
+  [-] Fever/chills
+  [-] Weight change
+  [-] Fatigue
+  [-] Night sweats
+  [-] Anorexia
+[...Cardiovascular...]
+  [-] Chest pain (CP) or pressure
+  [-] Orthopnea (short of breath lying down)
+  [-] Paroxysmal Nocturnal Dyspnea (PND)? - sudden shortness of breath that awakens pt from sleep
+  [-] Lower extremity edema
+  [-] Sudden loss of consciousness (syncope)
+  [-] Sense of rapid or irregular heart beat, palpatations
+  [-] Calf/leg pain/cramps w/ambulation
+[...Genito-Urinary...]
+  [-] Blood in urine
+  [-] Burning with urination
+  [-] Urination at night
+  [-] Incontinence (unintentional loss of urine)
+  [-] Urgency, Frequency
+  [-] Incomplete emptying
+  [-] Decreased force of stream
+[...Ob/Gyn/Breast...]
+[...Exit...]
+  [-] Quit
+  [-] Return
+  [-] Clear
+  [-] Restart
+  [-] ....
+  [-] ....
+  [-] ....
+[...Cardiovascular...]
+  [-] Chest pain (CP) or pressure
+  [-] Orthopnea (short of breath lying down)
+  [-] Paroxysmal Nocturnal Dyspnea (PND)? - sudden shortness of breath that awakens pt from sleep
+  [-] Lower extremity edema
+  [-] Sudden loss of consciousness (syncope)
+  [-] Sense of rapid or irregular heart beat, palpatations
+  [-] Calf/leg pain/cramps w/ambulation
+[...Genito-Urinary...]
+  [-] Blood in urine
+  [-] Burning with urination
+  [-] Urination at night
+  [-] Incontinence (unintentional loss of urine)
+  [-] Urgency, Frequency
+  [-] Incomplete emptying
+  [-] Decreased force of stream
+[...Neurological...]
+  [-] Sudden loss of neurological function
+  [-] Abrupt loss/change in level of consciousness
+  [-] Witnessed seizure activity
+  [-] Numbness
+  [-] Weakness
+  [-] Dizziness
+  [-] Balance problems
