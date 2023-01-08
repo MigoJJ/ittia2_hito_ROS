@@ -1,16 +1,19 @@
 package laout;
-//https://docs.oracle.com/javase/tutorial/uiswing/components/table.html
+//https://uw.pressbooks.pub/fcmtextbook/chapter/review-of-systems-ros/
 import javax.swing.*;
 import javax.swing.table.TableColumn;
+
+import lgs_comm.GetRowNoAt;
 
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.IOException;
 import java.util.Arrays;
 
 public class JTGSCells extends JPanel {
 	private static String getCellValue ="";
-	private static JTable table = null;
+	protected static JTable table = null;
     
     public JTGSCells() {
     	JScrollPane scrollPane = new JScrollPane(table);
@@ -23,9 +26,9 @@ public class JTGSCells extends JPanel {
         table.getColumnModel().getColumn(0).setMinWidth(200);
         
         setLayout(new BorderLayout());
-        setPreferredSize(new Dimension(1200, 500));
-        table.setRowHeight(35);
-        table.setFont(new Font("Arial", Font. PLAIN, 20));
+        setPreferredSize(new Dimension(1800, 600));
+        table.setRowHeight(30);
+        table.setFont(new Font("Arial", Font. PLAIN, 13));
         add(table.getTableHeader(), BorderLayout.PAGE_START);
         add(table, BorderLayout.CENTER);
         
@@ -38,10 +41,6 @@ public class JTGSCells extends JPanel {
 	                column.setPreferredWidth(50);
 	            }
 	        }
-	        
-	        
-	        
-	        
     
 table.addMouseListener( new MouseAdapter(){
     public void mousePressed(MouseEvent e){
@@ -53,7 +52,14 @@ table.addMouseListener( new MouseAdapter(){
 	        table.changeSelection(row, column, false, false);
 	        table.getModel().getValueAt(row, column);
 	        getCellValue = (String) table.getModel().getValueAt(row, column);
-	        PickuprosJtableCell.makeArrayList(getCellValue);
+	        try {
+				PickuprosJtableCell.makeArrayList(getCellValue);
+				GetRowNoAt.getIndexRow(row);
+				
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
     }
 });
 
