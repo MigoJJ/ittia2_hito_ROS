@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import laout.JTGSCells;
+import laout.ROS_Enter;
 
-public class GetRowNoAt extends JTGSCells{
+public class GetRowNoAt extends ROS_Enter{
 	public static void getIndexRow(int row) throws IOException{
 		File_cdrw_proc pjc = new File_cdrw_proc();
 		int column = 0;
@@ -28,6 +28,6 @@ public class GetRowNoAt extends JTGSCells{
 				 pjc.writeliner("/home/migoey/git/GDS_rosReturn/src/lgs_data/ROS_plate_tmp","  [-] "+ rcgetCellValue);
 				 }
 			}
-        }
+		}
 	}
 }

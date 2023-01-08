@@ -1,7 +1,7 @@
 // https://meded.ucsd.edu/clinicalmed/ros.html
 package laout;
 
-public class ReturnrosData {
+public class ROS_JtableDATA {
 	public static Object[] columnNames() {
 		Object[] rosDatacNameOrigin = {
 				"Item...","Commit...","Commit...","Commit...","Commit...","Commit...","Commit...","last"

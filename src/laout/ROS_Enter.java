@@ -12,15 +12,15 @@ import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-public class JTGSCells extends JPanel {
+public class ROS_Enter extends JPanel {
 	private static String getCellValue =null;
 	protected static JTable table = null;
     
-    public JTGSCells() {
+    public ROS_Enter() {
     	JScrollPane scrollPane = new JScrollPane(table);
 
-    	 Object[] roscolumnNames = (Object[]) ReturnrosData.columnNames(); 
-        Object[][] rosData = (Object[][]) ReturnrosData.roscrsData();  
+    	 Object[] roscolumnNames = (Object[]) ROS_JtableDATA.columnNames(); 
+        Object[][] rosData = (Object[][]) ROS_JtableDATA.roscrsData();  
 //        System.out.println(Arrays.deepToString(rosData));
         table = new JTable(rosData, roscolumnNames);
         table.setFillsViewportHeight(true);
@@ -62,7 +62,7 @@ table.addMouseListener(new MouseAdapter(){
     }
 
     private static void showFrame() {
-        JPanel panel = new JTGSCells();
+        JPanel panel = new ROS_Enter();
         panel.setOpaque(true);
         JFrame frame = new JFrame("JTable Selected Cells");
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -72,6 +72,6 @@ table.addMouseListener(new MouseAdapter(){
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(JTGSCells::showFrame);
+        SwingUtilities.invokeLater(ROS_Enter::showFrame);
     }
 }
