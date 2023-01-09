@@ -24,12 +24,12 @@ public class ROS_Enter extends JPanel {
 //        System.out.println(Arrays.deepToString(rosData));
         table = new JTable(rosData, roscolumnNames);
         table.setFillsViewportHeight(true);
-        table.getColumnModel().getColumn(0).setMinWidth(200);
+        table.getColumnModel().getColumn(0).setMinWidth(240);
         
         setLayout(new BorderLayout());
-        setPreferredSize(new Dimension(1800, 600));
+        setPreferredSize(new Dimension(2400, 600));
         table.setRowHeight(30);
-        table.setFont(new Font("Arial", Font. PLAIN, 13));
+        table.setFont(new Font("Arial", Font. PLAIN, 16));
         add(table.getTableHeader(), BorderLayout.PAGE_START);
         add(table, BorderLayout.CENTER);
         
