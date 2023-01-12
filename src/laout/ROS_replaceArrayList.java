@@ -34,7 +34,7 @@ public class ROS_replaceArrayList {
 
 	    for (int i = 0; i < stringArrayList.size(); i++) {
 	    	if (line_data.contains(stringArrayList.get(i))) {
-   		        line_data = ("   [+] > " + stringArrayList.get(i));
+   		        line_data = ("  [+] > " + stringArrayList.get(i));
 	    	}
 	    }
         File_cdrw_proc.writeliner("/home/migoey/git/GDS_rosReturn/src/lgs_data/ROS_plate",line_data);

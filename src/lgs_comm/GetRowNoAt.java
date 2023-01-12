@@ -15,7 +15,7 @@ public class GetRowNoAt extends ROS_Enter{
 		for (int i = 0; i < 8; i++) {
 			String rcgetCellValue = (String) table.getModel().getValueAt(row, i);
 			if (i==0) {
-				rcgetCellValue = "[..." + rcgetCellValue + "...]";
+				rcgetCellValue = "..." + rcgetCellValue + "...";
 				System.out.println(rcgetCellValue);
 				pjc.writeliner("/home/migoey/git/GDS_rosReturn/src/lgs_data/ROS_plate_tmp", rcgetCellValue);
 			}	
