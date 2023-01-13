@@ -7,10 +7,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import lgs_comm.File_cdrw_proc;
+import lgs_comm.GetRowNoAt;
 
 public class ROS_replaceArrayList {
 	public static void main(ArrayList<String> stringArrayList) throws IOException {
-		String fileName = "/home/migoey/git/GDS_rosReturn/src/lgs_data/ROS_plate_tmp";
+		String fileName = (GetRowNoAt.swd + "/lgs_data/ROS_plate_tmp");
 		ROS_replaceArrayList.readfiler(fileName,stringArrayList);
 	}
 	
@@ -37,7 +38,7 @@ public class ROS_replaceArrayList {
    		        line_data = ("  [+] > " + stringArrayList.get(i));
 	    	}
 	    }
-        File_cdrw_proc.writeliner("/home/migoey/git/GDS_rosReturn/src/lgs_data/ROS_plate",line_data);
+        File_cdrw_proc.writeliner(GetRowNoAt.swd + "/lgs_data/ROS_plate",line_data);
    
 	}
 }
