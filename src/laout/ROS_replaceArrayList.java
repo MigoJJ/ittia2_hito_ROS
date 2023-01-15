@@ -38,6 +38,9 @@ public class ROS_replaceArrayList {
 	    	if (line_data.contains(stringArrayList.get(i))) {
    		        line_data = ("  [+] > " + stringArrayList.get(i));
    		     File_cdrw_proc.writeliner(ROS_Enter.currentDir +"/src/lgs_data/31ROS6assessment", line_data);
+   		     File_cdrw_proc.writeliner("/home/migowj/ittia1_chart/je/panse/doro/text/samsara/8ASS", line_data);
+
+   		     
 	    	}
 	    }
         File_cdrw_proc.writeliner(GetRowNoAt.swd + "/lgs_data/ROS_plate",line_data);
