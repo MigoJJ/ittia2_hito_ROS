@@ -2,6 +2,8 @@ package laout;
 //https://uw.pressbooks.pub/fcmtextbook/chapter/review-of-systems-ros/
 import javax.swing.*;		
 import javax.swing.table.TableColumn;
+
+import lgs_comm.CleanDir;
 import lgs_comm.GetRowNoAt;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -18,9 +20,9 @@ public class ROS_Enter extends JPanel {
 	private static String getCellValue =null;
 	protected static JTable table = null;
     
-    public ROS_Enter() {
+    public ROS_Enter() throws IOException {
     	// file initialization from hana
-//    	FileUtils.cleanDirectory(directory); 
+    	CleanDir.main(null); 
     	
     	System.out.println("Current dir using System:" +currentDir);	
 		JScrollPane scrollPane = new JScrollPane(table);
@@ -59,7 +61,7 @@ table.addMouseListener(new MouseAdapter(){
     }
 });
     }
-    private static void showFrame() {
+    private static void showFrame() throws IOException {
         JPanel panel = new ROS_Enter();
         panel.setOpaque(true);
         JFrame frame = new JFrame("JTable Selected Cells");
@@ -69,6 +71,13 @@ table.addMouseListener(new MouseAdapter(){
         frame.setVisible(true);
     }
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(ROS_Enter::showFrame);
+        SwingUtilities.invokeLater(() -> {
+			try {
+				showFrame();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		});
     }
 }

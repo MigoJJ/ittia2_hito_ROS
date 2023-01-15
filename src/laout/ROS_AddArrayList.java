@@ -9,6 +9,10 @@ import lgs_comm.File_cdrw_proc;
 import lgs_comm.GetRowNoAt;
 
 public class ROS_AddArrayList extends GetRowNoAt{
+public ROS_AddArrayList() throws IOException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 static ArrayList<String> stringArrayList = new ArrayList<>();
 	public static void main(String getCellValue, int row, int column) {
 		try {

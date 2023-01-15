@@ -8,6 +8,11 @@ import java.util.List;
 import laout.ROS_Enter;
 
 public class GetRowNoAt extends ROS_Enter{
+	public GetRowNoAt() throws IOException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public static String currentUsersHomeDir = System.getProperty("user.dir" );
 	
 	public static void getIndexRow(int row) throws IOException{
