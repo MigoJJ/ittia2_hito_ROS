@@ -8,9 +8,6 @@ import java.util.List;
 import laout.ROS_Enter;
 
 public class GetRowNoAt extends ROS_Enter{
-	public static String swd = ("/home/migowj/git/GDS_rosReturn/src");
-//	public static String swd = ("/home/migoey/git/GDS_rosReturn/src");
-
 	public static String currentUsersHomeDir = System.getProperty("user.dir" );
 	
 	public static void getIndexRow(int row) throws IOException{

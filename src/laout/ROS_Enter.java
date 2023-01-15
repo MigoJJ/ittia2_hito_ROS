@@ -1,6 +1,6 @@
 package laout;
 //https://uw.pressbooks.pub/fcmtextbook/chapter/review-of-systems-ros/
-import javax.swing.*;	
+import javax.swing.*;		
 import javax.swing.table.TableColumn;
 import lgs_comm.GetRowNoAt;
 import java.awt.*;
@@ -13,10 +13,16 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 public class ROS_Enter extends JPanel {
+   public static String currentDir = System.getProperty("user.dir");
+   public static String swd = (currentDir + "/src");
 	private static String getCellValue =null;
 	protected static JTable table = null;
     
     public ROS_Enter() {
+    	// file initialization from hana
+//    	FileUtils.cleanDirectory(directory); 
+    	
+    	System.out.println("Current dir using System:" +currentDir);	
 		JScrollPane scrollPane = new JScrollPane(table);
 		Object[] roscolumnNames = (Object[]) ROS_JtableDATA.columnNames(); 
 		Object[][] rosData = (Object[][]) ROS_JtableDATA.roscrsData();  
