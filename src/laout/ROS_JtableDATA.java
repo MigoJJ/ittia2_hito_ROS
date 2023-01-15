@@ -1,7 +1,7 @@
 // https://meded.ucsd.edu/clinicalmed/ros.html
 package laout;
 
-public class ReturnrosData {
+public class ROS_JtableDATA {
 	public static Object[] columnNames() {
 		Object[] rosDatacNameOrigin = {
 				"Item...","Commit...","Commit...","Commit...","Commit...","Commit...","Commit...","last"
@@ -14,7 +14,7 @@ public class ReturnrosData {
         		{"General",
         			"Fever/chills","Weight change","Fatigue","Night sweats","Anorexia","",""},
         		{"Vision",	
-        					"Decreased visual acuity","Blurry vision","Diplopia","Eye pain/discharge","",",",""},
+        					"Decreased visual acuity","Blurry vision","Diplopia","Eye pain/discharge","","",""},
         		{"Head and Neck",
         					"Pain","Sores or ulcers in mouth","Change in hearing acuity","Ear pain or discharge",
         					"post nasal drip","hoarseness","Sense of lump/mass (globus) in throat w/swallowing"},
@@ -36,7 +36,7 @@ public class ReturnrosData {
         					"Incontinence (unintentional loss of urine)",
         					"Urgency, Frequency","Incomplete emptying","Decreased force of stream","Need to void soon after urinating"},
         		{"Hematology/Oncology",
-        					"Fevers", "chills", " cold sweats"," weight loss","Abnormal bleeding/brusing",
+        					"Fevers", "chills", "cold sweats","weight loss","Abnormal bleeding/brusing",
         					"New/growing lumps or bumps","Hypercoaguability"		
         					},
         		
