@@ -11,6 +11,7 @@ import lgs_comm.GetRowNoAt;
 
 public class ROS_replaceArrayList {
 	public static void main(ArrayList<String> stringArrayList) throws IOException {
+
 		String fileName = (GetRowNoAt.swd + "/lgs_data/ROS_plate_tmp");
 		ROS_replaceArrayList.readfiler(fileName,stringArrayList);
 	}
