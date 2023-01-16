@@ -1,7 +1,9 @@
 package laout;
 //https://uw.pressbooks.pub/fcmtextbook/chapter/review-of-systems-ros/
-import javax.swing.*;	
+import javax.swing.*;		
 import javax.swing.table.TableColumn;
+
+import lgs_comm.CleanDir;
 import lgs_comm.GetRowNoAt;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -13,10 +15,16 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 public class ROS_Enter extends JPanel {
+   public static String currentDir = System.getProperty("user.dir");
+//   public static String swd = (currentDir + "/src");
 	private static String getCellValue =null;
 	protected static JTable table = null;
     
-    public ROS_Enter() {
+    public ROS_Enter() throws IOException {
+    	// file initialization from hana
+    	CleanDir.main(null); 
+    	
+    	System.out.println("Current dir using System:" +currentDir);	
 		JScrollPane scrollPane = new JScrollPane(table);
 		Object[] roscolumnNames = (Object[]) ROS_JtableDATA.columnNames(); 
 		Object[][] rosData = (Object[][]) ROS_JtableDATA.roscrsData();  
@@ -53,7 +61,7 @@ table.addMouseListener(new MouseAdapter(){
     }
 });
     }
-    private static void showFrame() {
+    private static void showFrame() throws IOException {
         JPanel panel = new ROS_Enter();
         panel.setOpaque(true);
         JFrame frame = new JFrame("JTable Selected Cells");
@@ -63,6 +71,13 @@ table.addMouseListener(new MouseAdapter(){
         frame.setVisible(true);
     }
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(ROS_Enter::showFrame);
+        SwingUtilities.invokeLater(() -> {
+			try {
+				showFrame();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		});
     }
 }

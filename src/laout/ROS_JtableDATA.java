@@ -23,9 +23,9 @@ public class ROS_JtableDATA {
         					"Wheezing","Snoring or stop breathing","7"},
         		{"Cardiovascular",
         					"Chest pain (CP) or pressure", "Orthopnea (short of breath lying down)",
-        					"Paroxysmal Nocturnal Dyspnea (PND)? - sudden shortness of breath that awakens pt from sleep",
+        					"Paroxysmal Nocturnal Dyspnea (PND) - sudden shortness of breath that awakens pt from sleep",
         					"Lower extremity edema","Sudden loss of consciousness (syncope)",
-        					"Sense of rapid or irregular heart beat, palpatations","Calf/leg pain/cramps w/ambulation",
+        					"Sense of rapid or irregular heart beat, palpitations","Calf/leg pain/cramps w/ambulation",
         					"Wounds/ulcers in feet"},
         		{"Gastrointestinal",
         					"Heart burn/sub-sternal burning","Abdominal pain","Nausea or Vomiting",
@@ -40,7 +40,7 @@ public class ROS_JtableDATA {
         					"New/growing lumps or bumps","Hypercoaguability"		
         					},
         		
-      			{"Ob/Gyn/Breast","1","2","3","4","5","6","7"},
+//      			{"Ob/Gyn/Breast","1","2","3","4","5","6","7"},
 //Menstrual Hx?
 //Sweats?
 //Past pregnancies?
@@ -55,8 +55,8 @@ public class ROS_JtableDATA {
 	      			"Witnessed seizure activity","Numbness","Weakness","Dizziness","Balance problems","Headache"},
 	      	{"Endocrine",
 	      			"Polyuria, polydypsia, polyphagia?","Fatigue","Weight loss","Weight gain","5","6","7"},
-	       {"Infectious Diseases","1","2","3","4","5","6","7"},
-	      	{"Musculoskeletal","1","2","3","4","5","6","7"},
+//	       {"Infectious Diseases","1","2","3","4","5","6","7"},
+//	      	{"Musculoskeletal","1","2","3","4","5","6","7"},
 	       {"Mental Health",
 	      			"Do you feel sad or depressed much of the time","Alcohol, other substance abuse",
 	      			"Anxious much of the time","Memory problems","Confusion","6","7"},
