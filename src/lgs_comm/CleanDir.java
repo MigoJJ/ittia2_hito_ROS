@@ -41,7 +41,7 @@ public class CleanDir {
 		File directory = new File(currentDir +"/lgs_data");
 //		deleteDirectory(directory);
 		
-		 String a = (currentDir + "/src/tmp") ;
+		 String a = (currentDir + "/tmp") ;
 		 String b = (currentDir+ "/src/lgs_data") ;
 		 copy_Directory(a,b);
     }
