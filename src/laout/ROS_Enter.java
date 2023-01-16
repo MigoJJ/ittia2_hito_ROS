@@ -17,7 +17,10 @@ import java.util.Set;
 public class ROS_Enter extends JPanel {
    public static String currentDir = System.getProperty("user.dir");
 //   public static String swd = (currentDir + "/src");
+<<<<<<< HEAD
    public static String swd = (currentDir);
+=======
+>>>>>>> branch 'home230101' of https://github.com/MigoJJ/GDS_rosReturn.git
 	private static String getCellValue =null;
 	protected static JTable table = null;
     

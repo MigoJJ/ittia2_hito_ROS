@@ -17,16 +17,19 @@ static ArrayList<String> stringArrayList = new ArrayList<>();
 	public static void main(String getCellValue, int row, int column) {
 		try {
 			if ((String) getCellValue == "Exit") {
-//			System.out.println(stringArrayList); 
+		//	System.out.println(stringArrayList); 
 			ROS_replaceArrayList.main(stringArrayList);
 			File_cdrw_proc fcp1= new File_cdrw_proc(); 
-			
-		// write to 6SUJ
+		//  write to 6SUJ
 			fcp1.copyfiler(swd + "/lgs_data/ROS_plate", swd + "/lgs_data/31ROS");
+<<<<<<< HEAD
 			fcp1.copyfiler(swd + "/lgs_data/31ROS", "/home/migowj/ittia1_chart/je/panse/doro/text/samsara/3ROS");
 			
 			
 		// file clearing
+=======
+		//  file clearing
+>>>>>>> branch 'home230101' of https://github.com/MigoJJ/GDS_rosReturn.git
 					fcp1.deletefiler(swd + "/lgs_data/ROS_plate");
 					fcp1.deletefiler(swd + "/lgs_data/ROS_plate_tmp");
 					fcp1.checkfiler(swd + "/lgs_data/ROS_plate");
@@ -36,8 +39,6 @@ static ArrayList<String> stringArrayList = new ArrayList<>();
 					GetRowNoAt.getIndexRow(row);
 		       }else {
 			   		stringArrayList.add(getCellValue);
-//			   		Set<String> s = new LinkedHashSet<String>(stringArrayList); 
-//			   		System.out.println(s); 
 		        }
 		}
 		} catch (IOException e1) {
