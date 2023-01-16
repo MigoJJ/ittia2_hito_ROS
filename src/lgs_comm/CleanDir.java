@@ -42,7 +42,7 @@ public class CleanDir {
 //		deleteDirectory(directory);
 		
 		 String a = (currentDir + "/tmp") ;
-		 String b = (currentDir+ "/src/lgs_data") ;
+		 String b = (currentDir+ "/lgs_data") ;
 		 copy_Directory(a,b);
     }
 }
