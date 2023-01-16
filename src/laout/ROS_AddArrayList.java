@@ -23,6 +23,9 @@ static ArrayList<String> stringArrayList = new ArrayList<>();
 			
 		// write to 6SUJ
 			fcp1.copyfiler(swd + "/lgs_data/ROS_plate", swd + "/lgs_data/31ROS");
+			fcp1.copyfiler(swd + "/lgs_data/31ROS", "/home/migowj/ittia1_chart/je/panse/doro/text/samsara/3ROS");
+			
+			
 		// file clearing
 					fcp1.deletefiler(swd + "/lgs_data/ROS_plate");
 					fcp1.deletefiler(swd + "/lgs_data/ROS_plate_tmp");

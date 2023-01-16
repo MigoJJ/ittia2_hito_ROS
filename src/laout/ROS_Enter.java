@@ -16,7 +16,8 @@ import java.util.Set;
 
 public class ROS_Enter extends JPanel {
    public static String currentDir = System.getProperty("user.dir");
-   public static String swd = (currentDir + "/src");
+//   public static String swd = (currentDir + "/src");
+   public static String swd = (currentDir);
 	private static String getCellValue =null;
 	protected static JTable table = null;
     

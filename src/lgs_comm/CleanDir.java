@@ -38,7 +38,7 @@ public class CleanDir {
 	}
  
     public static void main(String[] args) throws IOException {
-		File directory = new File(currentDir +"/src/lgs_data");
+		File directory = new File(currentDir +"/lgs_data");
 //		deleteDirectory(directory);
 		
 		 String a = (currentDir + "/src/tmp") ;
