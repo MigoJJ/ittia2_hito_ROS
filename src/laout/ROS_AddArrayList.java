@@ -29,9 +29,9 @@ static ArrayList<String> stringArrayList = new ArrayList<>();
 
 					
 			fcp1.deletefiler(swd + "/lgs_data/ROS_plate");
-					fcp1.deletefiler(swd + "/lgs_data/ROS_plate_tmp");
-					fcp1.checkfiler(swd + "/lgs_data/ROS_plate");
-					fcp1.checkfiler(swd + "/lgs_data/ROS_plate_tmp");
+			fcp1.deletefiler(swd + "/lgs_data/ROS_plate_tmp");
+			fcp1.checkfiler(swd + "/lgs_data/ROS_plate");
+			fcp1.checkfiler(swd + "/lgs_data/ROS_plate_tmp");
 		}else {
 		       if(column==0) {
 					GetRowNoAt.getIndexRow(row);
