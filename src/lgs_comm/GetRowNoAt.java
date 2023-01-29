@@ -8,15 +8,13 @@ import java.util.List;
 import laout.ROS_Enter;
 
 public class GetRowNoAt extends ROS_Enter{
-	public static String currentUsersHomeDir = System.getProperty("user.dir" );
-
 	public GetRowNoAt() throws IOException {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
 	public static void getIndexRow(int row) throws IOException{
-		System.out.println(currentUsersHomeDir);
+		System.out.println(swd);
 		File_cdrw_proc pjc = new File_cdrw_proc();
 		int column = 0;
 		for (int i = 0; i < 8; i++) {

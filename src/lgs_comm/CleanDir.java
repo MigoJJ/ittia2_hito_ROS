@@ -38,11 +38,11 @@ public class CleanDir {
 	}
  
     public static void main(String[] args) throws IOException {
-		File directory = new File(currentDir +"/lgs_data");
+		File directory = new File(currentDir +"/src/lgs_data");
 //		deleteDirectory(directory);
 		
-		 String a = (currentDir + "/tmp") ;
-		 String b = (currentDir+ "/lgs_data") ;
+		 String a = (currentDir + "/src/tmp") ;
+		 String b = (currentDir+ "/src/lgs_data") ;
 		 copy_Directory(a,b);
     }
 }
