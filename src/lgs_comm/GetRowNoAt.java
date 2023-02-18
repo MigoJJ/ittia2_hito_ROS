@@ -12,15 +12,11 @@ public class GetRowNoAt extends ROS_Enter{
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-	public static String currentUsersHomeDir = System.getProperty("user.dir" );
 	
 	public static void getIndexRow(int row) throws IOException{
-		System.out.println(currentUsersHomeDir);
-
+		System.out.println(swd);
 		File_cdrw_proc pjc = new File_cdrw_proc();
 		int column = 0;
-				
 		for (int i = 0; i < 8; i++) {
 			String rcgetCellValue = (String) table.getModel().getValueAt(row, i);
 			if (i==0) {
