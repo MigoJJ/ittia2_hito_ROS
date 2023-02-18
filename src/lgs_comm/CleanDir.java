@@ -10,10 +10,18 @@ import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import javax.swing.JPanel;
+
+import laout.ROS_Enter;
  
-public class CleanDir {
-   public static String currentDir = System.getProperty("user.dir");
-    public static void deleteDirectory(File directory) throws IOException {
+public class CleanDir  extends ROS_Enter{
+	    public CleanDir() throws IOException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void deleteDirectory(File directory) throws IOException {
         Files.walk(directory.toPath())
                 .filter(Files::isRegularFile)
                 .map(Path::toFile)
@@ -37,12 +45,18 @@ public class CleanDir {
 		}
 	}
  
-    public static void main(String[] args) throws IOException {
-		File directory = new File(currentDir +"/lgs_data");
+    public static void main(String[] args) {
+
+		File directory = new File(swd +"/src/lgs_data");
 //		deleteDirectory(directory);
 		
-		 String a = (currentDir + "/tmp") ;
-		 String b = (currentDir+ "/lgs_data") ;
-		 copy_Directory(a,b);
+		 String a = (swd + "/tmp") ;
+		 String b = (swd+ "/lgs_data") ;
+		 try {
+			copy_Directory(a,b);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 }
