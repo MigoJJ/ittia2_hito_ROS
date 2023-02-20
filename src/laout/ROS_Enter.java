@@ -1,6 +1,6 @@
 package laout;
 //https://uw.pressbooks.pub/fcmtextbook/chapter/review-of-systems-ros/
-import javax.swing.*;		
+import javax.swing.*;			
 import javax.swing.table.TableColumn;
 import lgs_comm.CleanDir;
 import java.awt.*;
@@ -10,14 +10,16 @@ import java.io.IOException;
 
 
 public class ROS_Enter extends JPanel {
-   public static String currentDir = System.getProperty("user.dir");
-//   public static String swd = (currentDir + "/src");
-   public static String swd = (currentDir);
-
-   private static String getCellValue =null;
-	protected static JTable table = null;
+	   public static String currentDir = System.getProperty("user.dir");
+//	   public static String swd = (currentDir + "/src");
+	   public static String swd = (currentDir);
+	  
+	   private static String getCellValue =null;
+	   protected static JTable table = null;
     
     public ROS_Enter() throws IOException {
+    	 System.out.println(" swd = (currentDir)  "  + swd);
+    		
     	// file initialization from hana
     	CleanDir.main(null); 
     	
