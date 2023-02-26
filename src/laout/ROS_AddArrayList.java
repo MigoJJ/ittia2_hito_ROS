@@ -24,8 +24,8 @@ static ArrayList<String> stringArrayList = new ArrayList<>();
 			fcp1.copyfiler(swd + "/lgs_data/ROS_plate", swd + "/lgs_data/31ROS");
 //			fcp1.copyfiler(swd + "/lgs_data/31ROS6assessment", swd + "/lgs_data/31ROS");
 			
-			fcp1.copyfiler(swd + "/lgs_data/31ROS", "/home/migowj/ittia1_chart/je/panse/doro/text/samsara/3ROS");
-			fcp1.copyfiler(swd + "/lgs_data/31ROS6assessment", "/home/migowj/ittia1_chart/je/panse/doro/text/samsara/8ASS");
+			fcp1.copyfiler(swd + "/lgs_data/31ROS", "/home/migowj/ittia_chart/je/panse/doro/text/samsara/3ROS");
+			fcp1.copyfiler(swd + "/lgs_data/31ROS6assessment", "/home/migowj/ittia_chart/je/panse/doro/text/samsara/8ASS");
 
 					
 			fcp1.deletefiler(swd + "/lgs_data/ROS_plate");
